@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.study.test.study1.TestMapper">
+		
+	<insert id="test" parameterType="TestVO">
+		INSERT INTO test
+		(title, ctnt)
+		VALUES
+		(#{title}, #{ctnt})
+	</insert>
+	
+	<select id="selTest" resultType="TestPARAM">
+		SELECT title, ctnt FROM test
+	</select>
+</mapper>
