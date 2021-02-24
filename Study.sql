@@ -1,11 +1,18 @@
--- Study 쿼리
-CREATE TABLE test(
-	i_test INT AUTO_INCREMENT,
+CREATE TABLE t_board(
+	i_board INT UNSIGNED AUTO_INCREMENT,
 	title VARCHAR(30),
 	ctnt VARCHAR(1000),
-	PRIMARY KEY(i_test)
+	r_dt DATETIME DEFAULT NOW(),	
+	PRIMARY KEY(i_board)
+	
 );
-SELECT * FROM test;
-DROP TABLE tets;
+SELECT * FROM t_board;
+
+
+INSERT INTO t_board
+(title, ctnt)
+VALUES
+('첫내용', '처글');
+
 
 

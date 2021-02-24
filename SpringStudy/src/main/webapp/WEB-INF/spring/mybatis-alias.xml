@@ -3,8 +3,8 @@
 <configuration>
 	<typeAliases>
 		
-		<typeAlias type="com.study.test.study1.TestVO" alias="TestVO" />
-		<typeAlias type="com.study.test.study1.TestPARAM" alias="TestPARAM" />
+		<typeAlias type="com.study.test.board.model.BoardVO" alias="BoardVO" />
+		<typeAlias type="com.study.test.board.model.BoardPARAM" alias="BoardPARAM" />
 		 
 	</typeAliases>
 </configuration>

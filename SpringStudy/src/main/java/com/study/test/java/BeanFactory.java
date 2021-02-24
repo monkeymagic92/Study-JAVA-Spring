@@ -6,10 +6,10 @@ public class BeanFactory {
 		
 		if(beanName.equals("Samsung")) {
 			return new SamsungTv();
+			
 		} else if(beanName.equals("Lg")) {
 			return new LgTv();
 		}
-		
 		return null;
 	}
 }

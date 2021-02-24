@@ -2,35 +2,26 @@ package com.study.test.java;
 
 public class SamsungTv implements Tv {
 	
-	private int a = 123;
-	private int b = 456;
-	
+	private Speaker speaker;
+	private int price;
 	
 	public SamsungTv() {
 		System.out.println("==> SamsungTv 객체 생성");
-		this.a = 0;
-		this.b = 0;
+	}
+	
+	public SamsungTv(Speaker speaker) {
+		System.out.println("===> SamsungTv(2) 객체 생성");
+		this.speaker = speaker;
+	}
+	
+	public SamsungTv(Speaker speaker, int price) {
+		System.out.println("===> SamsungTv(3) 객체 생성");
+		this.speaker = speaker;
+		this.price = price;
 	}
 
-	public SamsungTv(int a, int b) {
-		this.a = a;
-		this.b = b;
-	}
-	
-	public void setA(int a) {
-		this.a = a;
-	}
-	
-	public int getA() {
-		return this.a;
-	}
-	
-	public int getB() {
-		return this.b;
-	}
-	
 	public void powerOn()  {
-		System.out.println("SamsungTv를 켠다");
+		System.out.println("SamsungTv를 켠다 (가격 : " + price + ")");
 	}
 	
 	public void powerOff() {
@@ -38,10 +29,10 @@ public class SamsungTv implements Tv {
 	}
 	
 	public void volumeUp() {
-		System.out.println("SamsungTv 볼륨 업!");
+		speaker.volumeUp();
 	}
 	
 	public void volumeDown() {
-		System.out.println("SamsungTv 볼륨 다운!");
+		speaker.volumeDown();
 	}
 }

@@ -2,6 +2,10 @@ package com.study.test.java;
 
 public class LgTv implements Tv {
 	
+	public LgTv() {
+		System.out.println("===> LgTv 생성");
+	}
+	
 	public void powerOn()  {
 		System.out.println("LgTv를 켠다");
 	}
