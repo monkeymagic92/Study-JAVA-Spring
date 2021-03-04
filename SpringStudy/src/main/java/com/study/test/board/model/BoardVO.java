@@ -7,6 +7,27 @@ public class BoardVO {
 	private String ctnt;
 	private String r_dt;
 	
+	private int chk;
+	private int i_like;
+	
+	
+	
+	public int getChk() {
+		return chk;
+	}
+
+	public void setChk(int chk) {
+		this.chk = chk;
+	}
+
+	public int getI_like() {
+		return i_like;
+	}
+
+	public void setI_like(int i_like) {
+		this.i_like = i_like;
+	}
+	
 	
 	
 	public String getR_dt() {

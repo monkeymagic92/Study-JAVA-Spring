@@ -7,8 +7,13 @@
 	</select>
 	
 	<select id="detailBoard" parameterType="BoardPARAM" resultType="BoardVO">
-		SELECT i_board, title, ctnt, r_dt FROM t_board
-		WHERE i_board = #{i_board}
+		SELECT A.i_board, A.title, A.ctnt, A.r_dt, B.chk, B.i_like
+		FROM t_board A
+		
+		LEFT JOIN t_like B
+		ON A.i_board = B.i_board
+		
+		WHERE A.i_board = #{i_board}
 	</select>
 	
 	<insert id="insBoard" parameterType="BoardPARAM">

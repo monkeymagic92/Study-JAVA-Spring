@@ -30,8 +30,9 @@
 		</c:forEach>
 	</table>
 	
+	<br><br>
 	<button type="button" onclick="moveToReg()">글등록</button>
-	
+	<br><br><br><br><br>
 	<div>
 		<form action="/email" method="post">
 			<input type="email" name="email" placeholder="이메일 입력">
