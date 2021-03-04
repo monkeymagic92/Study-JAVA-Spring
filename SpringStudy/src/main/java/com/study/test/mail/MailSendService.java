@@ -85,14 +85,14 @@ public class MailSendService {
     }
 	
 	// 이메일 인증
-	public String sendAutoMail(String email) {
+	public void sendAutoMail(String email) {
 		 
 		String authKey = getKey(6);
 		try {
 		    MailUtils sendMail = new MailUtils(mailSender);
 		    sendMail.setSubject("회원가입 이메일 인증");
 		    sendMail.setText(new StringBuffer().append("<h1>[이메일 인증]</h1>").append("<p>아래 버튼을 클릭하시면 이메일 인증이 완료됩니다.</p>")
-					.append("<form action='http://localhost:8089/user/signUpConfirm' method='post'>")
+					.append("<form action='http://localhost:8080/auth/auth' method='get'>")
 					.append("<input type='hidden' name='email' value='").append(email).append("'>")
 					.append("<input type='hidden' name='authKey' value='").append(authKey).append("'>")
 					.append("<input type='submit' value='이메일 인증 확인' style='width: 200px; height: 50px; border: 0; border-radius: 10px; background: #08a600; margin-top: 30px;'>").toString());
@@ -106,6 +106,5 @@ public class MailSendService {
 		    e.printStackTrace();
 		}
 		 
-        return authKey;
     }
 }
