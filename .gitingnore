@@ -1,0 +1,6 @@
+sdf
+.DS_Store
+*.log
+*.iml
+temp/
+
